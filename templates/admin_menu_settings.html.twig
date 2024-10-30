@@ -1,0 +1,22 @@
+<div class="wrap">
+    <h1>Plugin Settings</h1>
+    <div class="card" style="height: 225px;">
+        <h2>Setup connection</h2>
+    <p>Paste your Account API token here:</p>
+    <div id="poststuff">
+        <div id="post-body" class="metabox-holder columns-2">
+            <div id="post-body-content">
+                <div class="meta-box-sortables ui-sortable">
+                    <form method="post" action="">
+                        <input name="landing_pages_token" id="ladingi_token" class="regular-text" type="text" value="{{ landingPagesToken }}">
+                        <input name="submit" id="submit" class="button button-primary" value="Save API Token" type="submit" style="margin-top: 20px;">
+                        {% if submitted is defined %}
+                            <p>Token added!</p>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

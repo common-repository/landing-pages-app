@@ -1,0 +1,45 @@
+{
+  "name": "landingi/wordpress-plugin",
+  "type": "wordpress-plugin",
+  "description": "Landing pages wordpress integration plugin",
+  "keywords": [ "wordpress", "plugin", "landing pages" ],
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Landing Pages App",
+      "email": "developers@landingi.com",
+      "homepage": "https://landingi.com",
+      "role": "Author"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "composer/installers": "~1.0",
+    "twig/twig": "~1.0",
+    "guzzlehttp/guzzle": "~6.0",
+    "ext-json": "*",
+    "ext-dom": "*",
+    "ext-libxml": "*",
+    "symfony/polyfill-mbstring": "^1.15",
+    "symfony/polyfill-iconv": "^1.15"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.0",
+    "phpcompatibility/php-compatibility": "9.3.5",
+    "simplyadmire/composer-plugins" : "^2.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "LandingPages\\Wordpress\\Plugin\\": [
+        "src/"
+      ],
+      "LandingPages\\Wordpress\\Application\\": [
+        "app/"
+      ]
+    }
+  },
+  "scripts": {
+    "phpcs": "phpcs --ignore=vendor --ignore=node_modules --ignore=resources/js/min --runtime-set testVersion 5.4 --runtime-set installed_paths vendor/phpcompatibility/php-compatibility --standard=PHPCompatibility ."
+  }
+}
